@@ -1,0 +1,166 @@
+#logo img, #logo h2 ,.menu li,H1,.container img{
+  display: inline-block;
+  vertical-align: middle; 
+}
+@font-face {
+  font-family: 'cheese';
+  src: url('Cheese\ Durian.otf') format('truetype');
+}
+body{
+     font-family: 'cheese';
+    
+}
+#logo h2{
+   
+    color: #601537;
+}
+.menu li{
+
+margin-top: 1cm;
+padding-right: 0.5cm;
+}
+.menu a{
+    text-decoration: none;
+    
+    font-size: large;
+    color: #601537;
+}
+.barcher{
+    margin-top: 1cm;
+}
+.barcher button,.ajoute button{
+    background-color: #601537;
+    color: white;
+    border-radius: 1cm;
+    padding: 0.2cm;
+    width: 3cm;
+}
+.barcher input,.ajoute input,.ajoute select,.filtre select{
+    border: 1px solid #601537; 
+    border-radius: 5px;         
+    padding: 5px 10px;          
+    outline: none; 
+    box-shadow: 0 0 5px #cb91ac;
+}
+fieldset{
+    border: 1px solid #601537 ;
+    border-radius: 3cm;
+    width: 500px;
+    margin-top: 4cm;
+    box-shadow: 0 0 5px #cb91ac;
+}
+legend{
+    padding-top: 1cm;
+    text-align: center;
+    color: #601537;
+    
+}
+.ajoute{
+    padding: 2cm;
+   text-align: justify;
+
+}
+.ajoute input,.ajoute select,.ajoute button{
+margin: 0.2cm;
+}
+#l1{
+    width: 300px;
+    margin-top: 6cm;
+    margin-left: 2cm;
+}
+span{
+    display: block;
+    text-align: center ;
+    font-size: x-large;
+    
+    
+}
+H1{
+    color: #601537;
+    
+    margin-top: 1.5cm;
+}
+.liste th,.liste td{
+    
+    border: 1px solid #601537;
+    text-align: center;
+    padding: 8px;
+    box-shadow: 0 0 5px #cb91ac;
+   
+}
+.liste th{
+    background-color: #601537;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+.action button{
+    background-color: #601537;
+    color: white;
+    border-radius: 1cm;
+    padding: 0.2cm;
+    width: 3cm;
+  
+   
+   
+}
+.action{
+    border: 1px solid #764b5e;
+    border-radius: 8px;
+    padding: 2cm;
+box-shadow: 0 0 5px #cb91ac;
+}
+.mod{
+    margin-bottom: 1cm;
+}
+.action span{
+     display: block;
+    text-align: center ;
+    font-size: x-large;
+    margin-bottom: 1cm;
+}
+.table-container{
+     max-height:500px;
+     overflow-y: auto;
+      border: 1px solid #cb91ac;
+}
+.filtre{
+    margin: 1cm;
+    margin-left: +3cm;
+}
+label{
+    font-size: x-large;
+}
+.card{
+    padding:0.3cm;
+    margin-bottom: 0.5cm;
+    border-color: #601537;
+    box-shadow: 0 0 5px #cb91ac;
+   width: 8cm;
+   margin-left: 2cm;
+
+}
+#los{
+    margin-top: 1.2cm;
+    margin-left: 0.5cm;
+}
+#ims{
+margin-top: 1cm;
+width: 300px;
+}
+.footer-column{
+     display: flex;
+    justify-content: center; /* centre horizontalement */
+    gap: 40px;               /* espace entre les infos */
+    align-items: center;  
+}
+.container p{
+    text-align: center;
+}
+footer{
+    background-color: #601537;
+    color: white;
+    margin-top: 2cm;
+}
+
+

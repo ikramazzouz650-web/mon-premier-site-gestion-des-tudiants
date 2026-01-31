@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="etudiant.css">
+    <title>Etudiant</title>
+</head>
+<body>
+      <header class="container">
+        <div class="row " >
+                <div class="col-sm-4" id="logo">     
+                    <img src="logo_livre.jfif" width="100px" >
+                    <h2>Gestion des étudiants</h2>
+                </div>     
+                <div class="col-sm-4">
+                    <ul class="menu">
+                        
+                        <li><a href="#ajouteret">Ajouter</a></li>
+                        <li><a href="#listeet">Liste</a></li>
+                        <li><a href="#stat">Statistique</a></li>
+                    </ul>
+                   
+                </div>
+                <div class="col-sm-4">
+                     <form class="barcher"  >
+                    <input type="text" id="search">
+                    <button id="btnsrch"><a href="#listeet" style="text-decoration: none; color:white;">Rechercher</a></button>
+                    </form>
+                </div>
+        </div>
+        
+      </header>
+      <section class="container" id="ajouteret">
+       <div class="row">
+        <div class="col-sm-6" >
+        
+        <fieldset> 
+            
+            <legend>Ajouter un étudiant</legend>
+        <form class="ajoute" id="formajout">
+           <input type="text" placeholder="Nom" required  id="nom"><br>
+           <input type="text" placeholder="Prenom" required id="prenom"><br>
+           <input type="text" placeholder="Matricule" required id="matricule"><br>
+           <select required id="niveau">
+            <option value="">Choisir un niveau</option>
+            <option value="Licence 1">Licence 1</option>
+            <option value="licence 2">Licence 2</option>
+            <option value="Licence 3">Licence 3</option>
+            <option value="Master 1">Master 1</option>
+            <option value="Master 2">Master 2</option>
+           </select><br>
+    <select  required id="specialite">
+        <option value="">--Choisir la spécialité--</option>
+
+        <optgroup label="Informatique">
+            <option value="reseaux">Réseaux</option>
+            <option value="developpement">Développement</option>
+            <option value="ia">Intelligence Artificielle</option>
+        </optgroup>
+
+        <optgroup label="Mathématiques">
+            <option value="algebre">Algèbre</option>
+            <option value="statistique">Statistique</option>
+            <option value="analyse">Analyse</option>
+        </optgroup>
+                <optgroup label="Physique">
+            <option value="mecanique">Mécanique</option>
+            <option value="optique">Optique</option>
+            <option value="thermodynamique">Thermodynamique</option>
+        </optgroup>
+    </select><br>
+
+           <input type="number" placeholder="Note" required max="20" required min="0" id="note"><br>
+           <button type="submit" id="btnajout">Ajouter</button>
+
+
+        </form>
+    </fieldset>
+       
+        </div>
+    <div class="col-sm-6">
+        <img src="livre2.png"  id="l1"><br>
+        <span>Ajoutez facilement un nouvel étudiant en remplissant le formulaire ci-contre.</span><br>
+        <span>Toutes les informations sont importantes pour une gestion efficace et organisée.</span>
+    </div>
+    </div>
+      </section>
+      <section class="container" id="listeet">
+          <H1>Liste des étudiants</H1>
+          <div class="row">
+            <div class="col-md-8">
+                <div class="table-container"> 
+                <table border="1" width="100%" class="liste"  id="tabet">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Matricule</th>
+                    <th>Niveau</th>
+                    <th>Spécialité</th>
+                    <th>Note</th>
+                    
+                </tr>
+            </thead>
+            <tbody></tbody>
+
+          </table>
+        </div>
+           
+        </div>
+            <div class="col-md-4">          
+                    <div class="action">
+                        <span>Modifier ou supprimer un étudiant</span>
+                        <div class="mod"> <img src="modifier.png" width="30px"><button id="btnmod" ><a href="#ajouteret" style="text-decoration: none; color:white;">Modifier</a></button></div>
+                        <div><img src="supprimer.png" width="30px"> <button id="btnsupp">Supprimer</button></div>
+                      
+                    </div>
+          
+            </div>
+
+          </div>
+          
+      </section>
+      <section class="container" id="stat">
+      <H1>Statistqiues</H1>
+      <img src="statistique.png" width="50px" id="los">
+      <div class="row">
+        <div class="col-md-6">
+        <div class="filtre">
+            <label for=""> Filter par : </label>
+            <select id="filtre">
+    <option value="all">Toutes les étudiants</option>
+    <option value="niveau">Niveau</option>
+    <option value="specialite">Spécialité</option>
+    <option value="nivsp">Niveau et spécialité</option>
+</select>
+
+<select id="niveauFilter" style="display:none;">
+    <option value="">Choisir un niveau</option>
+    <option value="Licence 1">Licence 1</option>
+    <option value="Licence 2">Licence 2</option>
+    <option value="Licence 3">Licence 3</option>
+    <option value="Master 1">Master 1</option>
+    <option value="Master 2">Master 2</option>
+</select>
+ <select   id="specialiteFilter" style="display:none;">
+        <option value="">--Choisir la spécialité--</option>
+
+        <optgroup label="Informatique">
+            <option value="reseaux">Réseaux</option>
+            <option value="developpement">Développement</option>
+            <option value="ia">Intelligence Artificielle</option>
+        </optgroup>
+
+        <optgroup label="Mathématiques">
+            <option value="algebre">Algèbre</option>
+            <option value="statistique">Statistique</option>
+            <option value="analyse">Analyse</option>
+        </optgroup>
+                <optgroup label="Physique">
+            <option value="mecanique">Mécanique</option>
+            <option value="optique">Optique</option>
+            <option value="thermodynamique">Thermodynamique</option>
+        </optgroup>
+    </select>
+  <!-- ajoute toutes les spécialités possibles -->
+</select>
+        </div>
+        <div class="card">
+            <h3>Admis</h3>
+            <p id="admis">0</p>
+        </div>
+        <div class="card">
+            <h3>Ajournés</h3>
+            <p id="ajourne">0</p>
+        </div>
+        <div class="stat">
+            <div class="card">
+            <h3>Total étudiants</h3>
+            <p id="totalEtudiant">0</p>
+        </div>
+        
+        <div class="card">
+            <h3>Moyenne générale</h3>
+            <p id="moyenne">0</p>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="stati.jfif" id="ims" >
+        <span>Consultez les statistiques des étudiants pour suivre leur performance globale ou par catégorie.</span>
+    </div>
+      </div>
+      
+      </section>
+      <footer>
+    <div class="container">
+         <p>&copy; 2026 Gestion des étudiants. Tous droits réservés.</p>
+        <div class="footer-column">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> contact@gestionetudiants.com</p>
+            <p><i class="fas fa-phone"></i> +213 123 456 789</p>
+            <p><i class="fab fa-instagram"></i> @gestionetudiants</p>
+        </div>
+    </div>
+      </footer>
+      <script src="etudiant.js"></script>
+</body>
+</html>
